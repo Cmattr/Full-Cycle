@@ -1,9 +1,13 @@
-// BlogPost.test.tsx
-
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import BlogPost from '../Components/BlogPost';
+
+test('renders Blog Post header', () => {
+    render(<BlogPost />);
+    const headerElement = screen.getByText(/Blog Post/i);
+    expect(headerElement).toBeInTheDocument();
+  });
 
 describe('BlogPost', () => {
   it('renders correctly', () => {
