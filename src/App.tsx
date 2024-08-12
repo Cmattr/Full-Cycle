@@ -1,13 +1,18 @@
-
 import React from 'react';
 import BlogPost from './Components/BlogPost';
+import './App.css';
 
-const App: React.FC = () => {
+
+function App() {
   return (
     <div>
-      <BlogPost />
+      <header>
+        <BlogPost/>
+      </header>
+
     </div>
   );
-};
+}
 
 export default App;
+
